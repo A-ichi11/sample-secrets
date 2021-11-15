@@ -1,5 +1,9 @@
 package main
 
+// Use this code snippet in your app.
+// If you need more information about configurations or implementing the sample code, visit the AWS docs:
+// https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/setting-up.html
+
 import (
 	"encoding/base64"
 	"fmt"
@@ -10,8 +14,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/secretsmanager"
 )
 
-func main() {
-
+func GetSecret() {
 	secretName := "sample-secrets-name"
 	region := "ap-northeast-1"
 
@@ -75,6 +78,5 @@ func main() {
 	}
 
 	// Your code goes here.
-	fmt.Println("secretString:", secretString)
-	fmt.Println("decodedBinarySecret", decodedBinarySecret)
+	fmt.Println("secretString:", secretString, "decodedBinarySecret", decodedBinarySecret)
 }
